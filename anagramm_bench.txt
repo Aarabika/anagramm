@@ -1,0 +1,56 @@
+goos: linux
+goarch: amd64
+BenchmarkMain/Базовый_3-4                	                                                                            3000	    476320 ns/op	   53760 B/op	    6662 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_3-4                                         	                        3000	    476606 ns/op	   54176 B/op	    6692 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар3-4                                                  	                        3000	    508097 ns/op	   54080 B/op	    6672 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова3-4                                                 	    3000	    483204 ns/op	   54496 B/op	    6702 allocs/op
+BenchmarkMain/Базовый_4-4                                                                                       	    1000	   1920665 ns/op	  169280 B/op	   21020 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_4-4                                                          	    1000	   1939754 ns/op	  169760 B/op	   21050 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар4-4                                                                   	    1000	   1962657 ns/op	  169920 B/op	   21040 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова4-4                                                 	    1000	   2152630 ns/op	  170400 B/op	   21070 allocs/op
+BenchmarkMain/Базовый_5-4                                                                                       	     100	  11291495 ns/op	 1237502 B/op	  103071 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_5-4                                                          	     200	   6921356 ns/op	 1238088 B/op	  103101 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар5-4                                                                   	     200	   7007479 ns/op	 1238408 B/op	  103101 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова5-4                                                 	     200	   6983733 ns/op	 1239048 B/op	  103131 allocs/op
+BenchmarkMain/Базовый_6-4                                                                                       	     100	  15239169 ns/op	 2481880 B/op	  206665 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_6-4                                                          	     100	  15134323 ns/op	 2482520 B/op	  206695 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар6-4                                                                   	     100	  15467845 ns/op	 2483481 B/op	  206715 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова6-4                                                 	     100	  15573435 ns/op	 2484120 B/op	  206745 allocs/op
+BenchmarkMain/Базовый_7-4                                                                                       	      50	  30921415 ns/op	 4636784 B/op	  386230 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_7-4                                                          	      50	  30730271 ns/op	 4637426 B/op	  386260 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар7-4                                                                   	      50	  31589203 ns/op	 4639024 B/op	  386300 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова7-4                                                 	      50	  31318877 ns/op	 4639664 B/op	  386330 allocs/op
+BenchmarkMain/Базовый_8-4                                                                                       	      20	  60739945 ns/op	 8027540 B/op	  668624 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_8-4                                                          	      20	  60331714 ns/op	 8028179 B/op	  668654 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар8-4                                                                   	      20	  62674160 ns/op	 8031060 B/op	  668734 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова8-4                                                 	      20	  60975176 ns/op	 8031701 B/op	  668764 allocs/op
+BenchmarkMain/Базовый_9-4                                                                                       	      10	 137803069 ns/op	29843507 B/op	 1598648 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_9-4                                                          	      10	 138623260 ns/op	29844465 B/op	 1598678 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар9-4                                                                   	      10	 138450036 ns/op	29848310 B/op	 1598798 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова9-4                                                 	      10	 139094827 ns/op	29849265 B/op	 1598828 allocs/op
+BenchmarkMain/Базовый_10-4                                                                                      	       5	 224131562 ns/op	46177305 B/op	 2473555 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_10-4                                                         	       5	 224802606 ns/op	46178259 B/op	 2473585 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар10-4                                                                  	       5	 226453555 ns/op	46184345 B/op	 2473775 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова10-4                                                	       5	 226281982 ns/op	46185302 B/op	 2473805 allocs/op
+BenchmarkMain/Базовый_11-4                                                                                      	       3	 349886447 ns/op	68221216 B/op	 3654448 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_11-4                                                         	       3	 350398925 ns/op	68222192 B/op	 3654478 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар11-4                                                                  	       3	 357030311 ns/op	68230826 B/op	 3654748 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова11-4                                                	       3	 350815510 ns/op	68231786 B/op	 3654778 allocs/op
+BenchmarkMain/Базовый_12-4                                                                                      	       2	 543289566 ns/op	99466464 B/op	 5328065 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_12-4                                                         	       2	 543203112 ns/op	99467448 B/op	 5328095 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар12-4                                                                  	       2	 554482021 ns/op	99479928 B/op	 5328485 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова12-4                                                	       2	 544683430 ns/op	99480896 B/op	 5328515 allocs/op
+BenchmarkMain/Базовый_13-4                                                                                      	       2	 816017961 ns/op	141070176 B/op	 7556720 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_13-4                                                         	       2	 811750016 ns/op	141071192 B/op	 7556750 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар13-4                                                                  	       2	 819351718 ns/op	141088112 B/op	 7557280 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова13-4                                                	       2	 819638711 ns/op	141089120 B/op	 7557310 allocs/op
+BenchmarkMain/Базовый_14-4                                                                                      	       1	1206071738 ns/op	198170768 B/op	10615422 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_14-4                                                         	       1	1191941286 ns/op	198171712 B/op	10615452 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар14-4                                                                  	       1	1203984361 ns/op	198195392 B/op	10616192 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова14-4                                                	       1	1201174926 ns/op	198196336 B/op	10616222 allocs/op
+BenchmarkMain/Базовый_15-4                                                                                      	       1	1716337532 ns/op	272864832 B/op	14616669 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_входного_слова_15-4                                                         	       1	1701684490 ns/op	272865744 B/op	14616699 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словар15-4                                                                  	       1	1723866802 ns/op	272897120 B/op	14617679 allocs/op
+BenchmarkMain/Базовый_с_сортировкой_словаря_и_входного_слова15-4                                                	       1	1722672632 ns/op	272898080 B/op	14617709 allocs/op
+PASS
+ok  	command-line-arguments	90.123s

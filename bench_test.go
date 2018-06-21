@@ -74,7 +74,25 @@ func benchmarkBase(values []string, len int, dictionary map[int]map[string][]str
 
 	for _, value := range values {
 		for n := 0; n < b.N; n++ {
-			GetAnagrams(value, numberVal, dictionary)
+			badWords, str := PrepareString(value)
+			value := Run(str, numberVal, dictionary)
+
+
+			var items  [][]string
+
+			for _, child := range value {
+				items = collapse(child, []string{}, items)
+			}
+
+			combinations := GetWords(dictionary, items)
+
+			items = [][]string{}
+
+			for _,combination := range combinations {
+				items = GetAllCombinations(combination, []string{}, 0, items, badWords)
+			}
+
+			DeleteEquals(items)
 		}
 	}
 
@@ -87,12 +105,25 @@ func benchmarkBaseWithWordSort(values []string, len int, dictionary map[int]map[
 	for _, value := range values {
 		for n := 0; n < b.N; n++ {
 			value = sortStringBytes(value)
+			badWords, str := PrepareString(value)
+			value := Run(str, numberVal, dictionary)
 
-			var value  =  Run(value,numberVal, dictionary)
+
+			var items  [][]string
 
 			for _, child := range value {
-				GetAnagrams(child, []string{}, [][]string{})
+				items = collapse(child, []string{}, items)
 			}
+
+			combinations := GetWords(dictionary, items)
+
+			items = [][]string{}
+
+			for _,combination := range combinations {
+				items = GetAllCombinations(combination, []string{}, 0, items, badWords)
+			}
+
+			DeleteEquals(items)
 		}
 	}
 
@@ -104,11 +135,25 @@ func benchmarkRunWithDictSort(values []string, len int, dictionary map[int]map[s
 
 	for _, value := range values {
 		for n := 0; n < b.N; n++ {
-			var value  =  RunWithSort(value,numberVal, dictionary)
+			badWords, str := PrepareString(value)
+			value := RunWithSort(str, numberVal, dictionary)
+
+
+			var items  [][]string
 
 			for _, child := range value {
-				GetAnagrams(child, []string{}, [][]string{})
+				items = collapse(child, []string{}, items)
 			}
+
+			combinations := GetWords(dictionary, items)
+
+			items = [][]string{}
+
+			for _,combination := range combinations {
+				items = GetAllCombinations(combination, []string{}, 0, items, badWords)
+			}
+
+			DeleteEquals(items)
 		}
 	}
 
@@ -122,11 +167,25 @@ func benchmarkRunWithDictSortWithWordSort(values []string, len int, dictionary m
 		for n := 0; n < b.N; n++ {
 			value = sortStringBytes(value)
 
-			var value  =  RunWithSort(value,numberVal, dictionary)
+			badWords, str := PrepareString(value)
+			value := RunWithSort(str, numberVal, dictionary)
+
+
+			var items  [][]string
 
 			for _, child := range value {
-				GetAnagrams(child, []string{}, [][]string{})
+				items = collapse(child, []string{}, items)
 			}
+
+			combinations := GetWords(dictionary, items)
+
+			items = [][]string{}
+
+			for _,combination := range combinations {
+				items = GetAllCombinations(combination, []string{}, 0, items, badWords)
+			}
+
+			DeleteEquals(items)
 		}
 	}
 

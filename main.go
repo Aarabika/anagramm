@@ -54,14 +54,14 @@ func GetAnagrams(str string, badWords []string, number [][]int, dictionary map[i
 		items = collapse(child, []string{}, items)
 	}
 
-	combinations := getWords(dictionary, items)
+	combinations := GetWords(dictionary, items)
 
 	items = [][]string{}
 	for _,combination := range combinations {
-		items = getAllCombinations(combination, []string{}, 0, items, badWords)
+		items = GetAllCombinations(combination, []string{}, 0, items, badWords)
 	}
 
-	return deleteEquals(items)
+	return DeleteEquals(items)
 }
 
 func collapse(item *anagram , current []string, all [][]string) [][]string {
@@ -77,7 +77,7 @@ func collapse(item *anagram , current []string, all [][]string) [][]string {
 	return all
 }
 
-func getWords(dictionary map[int]map[string][]string, combinations [][]string) [][][]string {
+func GetWords(dictionary map[int]map[string][]string, combinations [][]string) [][][]string {
 	words := make([][][]string, len(combinations))
 
 	for key1, combination := range combinations {
@@ -91,21 +91,21 @@ func getWords(dictionary map[int]map[string][]string, combinations [][]string) [
 	return words
 }
 
-func getAllCombinations(combinations [][]string, current []string, currentIndex int, result [][]string, badWords []string) [][]string {
+func GetAllCombinations(combinations [][]string, current []string, currentIndex int, result [][]string, badWords []string) [][]string {
 	if currentIndex == len(combinations) {
 		return append(result, current)
 	}
 
 	for _, val := range combinations[currentIndex] {
 		if  !findString(badWords, val) {
-			result = getAllCombinations(combinations, append(current, val), currentIndex + 1, result, badWords)
+			result = GetAllCombinations(combinations, append(current, val), currentIndex + 1, result, badWords)
 		}
 	}
 
 	return result
 }
 
-func deleteEquals(combinations [][]string) [][]string {
+func DeleteEquals(combinations [][]string) [][]string {
 	var result [][]string
 
 	for k := range combinations {
