@@ -6,6 +6,7 @@ import (
 	"strconv"
 	"golang.org/x/text/encoding/charmap"
 	"fmt"
+	"strings"
 )
 
 const DictPath  = "./dict/dict1.txt"
@@ -13,13 +14,13 @@ const DictPath  = "./dict/dict1.txt"
 func main() {
 	dict := GetDict(DictPath)
 
-	fmt.Print("Введите строку: ")
-
-	rusWord, _ := charmap.Windows1251.NewEncoder().String("кот кот кот кот")
-
+	rusWord, _ := charmap.Windows1251.NewEncoder().String("языкотворческий")
 	words, word := PrepareString(rusWord)
+
+	word = sortStringBytes(word)
+
 	numberVal := DecomposeNumber(len(word))
-	GetAnagrams(word, words, numberVal, dict)
+	combinations := GetAnagrams(word, words, numberVal, dict)
 
 
 	//fmt.Print("Введите строку: ")
@@ -31,16 +32,17 @@ func main() {
 	//
 	//words, word := PrepareString(rusWord)
 	//numberVal := DecomposeNumber(len(word))
-	//combination := GetAnagrams(word, words, numberVal, dict)
-	//
-	//for k, v := range combination {
-	//	for key, word := range v {
-	//		str, _ := charmap.Windows1251.NewDecoder().String(word)
-	//		v[key] = string(str)
-	//	}
-	//
-	//	fmt.Print(strconv.Itoa(k)  + ": " + strings.Join(v," "))
-	//}
+	//combinations := GetAnagrams(word, words, numberVal, dict)
+
+
+	for k, v := range combinations {
+		for key, word := range v {
+			str, _ := charmap.Windows1251.NewDecoder().String(word)
+			v[key] = string(str)
+		}
+
+		fmt.Println(strconv.Itoa(k)  + ": " + strings.Join(v," "))
+	}
 }
 
 func GetAnagrams(str string, badWords []string, number [][]int, dictionary map[int]map[string][]string) [][]string {
